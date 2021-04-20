@@ -34,8 +34,9 @@ function chestnut(){
 chestnut();
 console.log(nut)
 console.log("全局中的this：",this)
-浏览器中的this：
 ```
+浏览器中的this：
+
 图片
 
 chestnut函数中的this指向了window，全局的this也是指向了window。
