@@ -23,6 +23,7 @@ console.log(nut)
 
 >浏览器直接在全局范围执行脚本文件
 而在Node中，Node将代码隐藏在一个立即被调用的匿名函数中，我们可以使用global来访问全局范围
+
 咱们将this打印出来康康：
 ```javascript
 var nut = 1
