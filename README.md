@@ -17,12 +17,14 @@ console.log(nut)
 
 尴尬了…为啥是1捏？？？
 
+
+
 一模一样的代码在node中运行出来的结果居然不一样，这其实是因为this的指向问题，但是这个指向和我们通常认知中的指向是不一样的。这个指向问题是由于node工作原理造成的。
 
-浏览器直接在全局范围执行脚本文件
+>浏览器直接在全局范围执行脚本文件
 而在Node中，Node将代码隐藏在一个立即被调用的匿名函数中，我们可以使用global来访问全局范围
 咱们将this打印出来康康：
-
+```javascript
 var nut = 1
 function chestnut(){
     this.nut = 2;
@@ -32,7 +34,7 @@ chestnut();
 console.log(nut)
 console.log("全局中的this：",this)
 浏览器中的this：
-
+```
 图片
 
 chestnut函数中的this指向了window，全局的this也是指向了window。
